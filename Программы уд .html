@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Справочник по программам удаленного доступа</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --light-color: #ecf0f1;
+            --dark-color: #34495e;
+            --success-color: #2ecc71;
+            --warning-color: #f39c12;
+            --danger-color: #e74c3c;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+        
+        .program-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .program-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .program-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        
+        .program-content {
+            padding: 1.5rem;
+        }
+        
+        .program-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .program-features {
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-list {
+            list-style-type: none;
+        }
+        
+        .feature-list li {
+            padding: 0.3rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .feature-list li:before {
+            content: "✓";
+            color: var(--success-color);
+            position: absolute;
+            left: 0;
+        }
+        
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .pros, .cons {
+            padding: 0.8rem;
+            border-radius: 5px;
+        }
+        
+        .pros {
+            background-color: rgba(46, 204, 113, 0.1);
+            border-left: 4px solid var(--success-color);
+        }
+        
+        .cons {
+            background-color: rgba(231, 76, 60, 0.1);
+            border-left: 4px solid var(--danger-color);
+        }
+        
+        .pros-title, .cons-title {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .pros-title {
+            color: var(--success-color);
+        }
+        
+        .cons-title {
+            color: var(--danger-color);
+        }
+        
+        .program-link {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            text-decoration: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        
+        .program-link:hover {
+            background-color: #2980b9;
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .programs-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .pros-cons {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Программы удаленного доступа</h1>
+            <p class="subtitle">Сравнение возможностей и выбор подходящего решения</p>
+        </div>
+    </header>
+    
+    <main class="container">
+        <div class="programs-grid">
+            <!-- TeamViewer -->
+            <div class="program-card">
+                <img src="https://www.teamviewer.com/wp-content/themes/teamviewer/assets/images/logos/teamviewer-logo.svg" alt="TeamViewer" class="program-image" style="background-color: #0E8EE9; padding: 20px;">
+                <div class="program-content">
+                    <h2 class="program-title">TeamViewer</h2>
+                    <div class="program-features">
+                        <ul class="feature-list">
+                            <li>Удаленный доступ к компьютеру</li>
+                            <li>Передача файлов</li>
+                            <li>Видеоконференции</li>
+                            <li>Кроссплатформенность</li>
+                            <li>Поддержка мобильных устройств</li>
+                        </ul>
+                    </div>
+                    <div class="pros-cons">
+                        <div class="pros">
+                            <div class="pros-title">Достоинства</div>
+                            <ul>
+                                <li>Простота использования</li>
+                                <li>Высокая скорость соединения</li>
+                                <li>Безопасное соединение</li>
+                                <li>Бесплатная версия для личного использования</li>
+                            </ul>
+                        </div>
+                        <div class="cons">
+                            <div class="cons-title">Недостатки</div>
+                            <ul>
+                                <li>Дорогая коммерческая лицензия</li>
+                                <li>Может блокировать сессии при частом использовании бесплатной версии</li>
+                                <li>Требует установки на оба устройства</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="https://www.teamviewer.com/ru/" class="program-link" target="_blank">Официальный сайт</a>
+                </div>
+            </div>
+            
+            <!-- AnyDesk -->
+            <div class="program-card">
+                <img src="https://anydesk.com/images/illustrations/logo.svg" alt="AnyDesk" class="program-image" style="background-color: #EF443B; padding: 20px;">
+                <div class="program-content">
+                    <h2 class="program-title">AnyDesk</h2>
+                    <div class="program-features">
+                        <ul class="feature-list">
+                            <li>Удаленный доступ с низкой задержкой</li>
+                            <li>Передача файлов</li>
+                            <li>Запись сеансов</li>
+                            <li>Поддержка VPN</li>
+                            <li>Мобильные приложения</li>
+                        </ul>
+                    </div>
+                    <div class="pros-cons">
+                        <div class="pros">
+                            <div class="pros-title">Достоинства</div>
+                            <ul>
+                                <li>Очень высокая скорость работы</li>
+                                <li>Минимальные системные требования</li>
+                                <li>Не требует установки (портативная версия)</li>
+                                <li>Бесплатен для личного использования</li>
+                            </ul>
+                        </div>
+                        <div class="cons">
+                            <div class="cons-title">Недостатки</div>
+                            <ul>
+                                <li>Меньше функций по сравнению с TeamViewer</li>
+                                <li>Ограничения в бесплатной версии</li>
+                                <li>Менее распространен, чем TeamViewer</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="https://anydesk.com/ru" class="program-link" target="_blank">Официальный сайт</a>
+                </div>
+            </div>
+            
+            <!-- LogMeIn -->
+            <div class="program-card">
+                <img src="https://www.logmein.com/hubfs/lmi-logo-2020.svg" alt="LogMeIn" class="program-image" style="background-color: #FFFFFF; padding: 20px;">
+                <div class="program-content">
+                    <h2 class="program-title">LogMeIn</h2>
+                    <div class="program-features">
+                        <ul class="feature-list">
+                            <li>Удаленный доступ к компьютерам</li>
+                            <li>Облачное хранилище файлов</li>
+                            <li>Многофакторная аутентификация</li>
+                            <li>Централизованное управление</li>
+                            <li>Поддержка мобильных устройств</li>
+                        </ul>
+                    </div>
+                    <div class="pros-cons">
+                        <div class="pros">
+                            <div class="pros-title">Достоинства</div>
+                            <ul>
+                                <li>Высокий уровень безопасности</li>
+                                <li>Хорошая интеграция с бизнес-процессами</li>
+                                <li>Поддержка большого числа устройств</li>
+                                <li>Надежное соединение</li>
+                            </ul>
+                        </div>
+                        <div class="cons">
+                            <div class="cons-title">Недостатки</div>
+                            <ul>
+                                <li>Высокая стоимость</li>
+                                <li>Нет бесплатной версии</li>
+                                <li>Более сложная настройка</li>
+                                <li>Требует больше ресурсов</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="https://www.logmein.com/" class="program-link" target="_blank">Официальный сайт</a>
+                </div>
+            </div>
+            
+            <!-- Microsoft Remote Desktop -->
+            <div class="program-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Microsoft_Remote_Desktop_icon.png/1200px-Microsoft_Remote_Desktop_icon.png" alt="Microsoft Remote Desktop" class="program-image" style="background-color: #FFFFFF; object-fit: contain; padding: 20px;">
+                <div class="program-content">
+                    <h2 class="program-title">Microsoft Remote Desktop</h2>
+                    <div class="program-features">
+                        <ul class="feature-list">
+                            <li>Удаленный доступ к Windows-компьютерам</li>
+                            <li>Поддержка RDP-протокола</li>
+                            <li>Передача звука и принтеров</li>
+                            <li>Поддержка сенсорных устройств</li>
+                            <li>Интеграция с Azure</li>
+                        </ul>
+                    </div>
+                    <div class="pros-cons">
+                        <div class="pros">
+                            <div class="pros-title">Достоинства</div>
+                            <ul>
+                                <li>Бесплатный для пользователей Windows</li>
+                                <li>Хорошая интеграция с Windows</li>
+                                <li>Высокая производительность</li>
+                                <li>Поддержка многомониторных конфигураций</li>
+                            </ul>
+                        </div>
+                        <div class="cons">
+                            <div class="cons-title">Недостатки</div>
+                            <ul>
+                                <li>Работает только с Windows</li>
+                                <li>Сложная настройка для внешнего доступа</li>
+                                <li>Меньше функций по сравнению с конкурентами</li>
+                                <li>Требует настройки сети (проброс портов)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="https://learn.microsoft.com/ru-ru/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients" class="program-link" target="_blank">Официальный сайт</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>© 2023 Справочник по программам удаленного доступа. Все права защищены.</p>
+            <p>Информация предоставлена для ознакомления и может быть неактуальной.</p>
+        </div>
+    </footer>
+</body>
+</html>
